@@ -62,7 +62,7 @@ body {
 
 img {
   max-width: 100%;
-  height: aut0;
+  height: auto;
   vertical-align: middle; }
 
 a {
@@ -138,7 +138,7 @@ a {
 .text-gray900 {
   color: #212529; }
 
-/*文字對齊*/
+/*對齊*/
 .text-center {
   text-align: center; }
 
@@ -147,6 +147,9 @@ a {
 
 .text-left {
   text-align: left; }
+
+.align-middle {
+  vertical-align: middle; }
 
 /*文字標題*/
 .title {
@@ -1500,13 +1503,13 @@ a {
 
 .header-nav li a {
   font-size: 20px;
-  padding: 0 32px; }
+  padding: 8px 32px; }
   .header-nav li a:hover {
     color: rgba(255, 255, 255, 0.5); }
 
 @media (max-width: 992px) {
   .header-nav li a {
-    padding: 0 20px; } }
+    padding: 8px 20px; } }
 
 @media (max-width: 767px) {
   .header-nav {
@@ -1541,7 +1544,7 @@ a {
     display: inline-block; }
   .footer-contact li a:hover {
     opacity: 0.5; }
-  .footer-bottom {
+  .footer-footer {
     border-top: 1px solid white; }
   .footer-privacy li {
     margin-right: 48px; }
@@ -1572,7 +1575,7 @@ a {
 @media (max-width: 767px) {
   .footer {
     padding: 24px 0; }
-    .footer-top {
+    .footer-body {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1592,7 +1595,7 @@ a {
       font-size: 20px; }
     .footer-contact li a {
       font-size: 16px; }
-    .footer-bottom {
+    .footer-footer {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -1600,7 +1603,7 @@ a {
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start; }
-      .footer-bottom p {
+      .footer-footer p {
         font-size: 14px; }
     .footer-privacy {
       margin-right: 0;
@@ -1763,6 +1766,7 @@ a {
 .recommend {
   padding: 60px 0 80px; }
   .recommend-item {
+    height: 460px;
     border-radius: 4px;
     overflow: hidden;
     -webkit-box-shadow: 0px 2px 6px #00000029;
@@ -1776,8 +1780,8 @@ a {
   .recommend-text {
     border: 1px solid #DEE2E6;
     padding: 16px;
-    height: 204px; }
-    .recommend-text span {
+    height: calc(100% - 256px); }
+    .recommend-text h4 {
       font-size: 14px; }
     .recommend-text time {
       font-size: 14px; }
@@ -1841,6 +1845,52 @@ a {
     @media (max-width: 767px) {
       .contant-submit {
         padding: 8px 0; } }
+
+/*客製checkbox樣式*/
+.styled-checkbox {
+  position: absolute;
+  opacity: 0; }
+  .styled-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0; }
+  .styled-checkbox + label:before {
+    content: "";
+    margin-right: 4px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 3px; }
+    @media (max-width: 992px) {
+      .styled-checkbox + label:before {
+        width: 16px;
+        height: 16px; } }
+  .styled-checkbox:hover + label:before {
+    border: 2px solid #AA0601;
+    background: #AA0601; }
+  .styled-checkbox:checked + label:before {
+    border: 2px solid #AA0601;
+    background: #AA0601; }
+  .styled-checkbox:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 4px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+    @media (max-width: 992px) {
+      .styled-checkbox:checked + label:after {
+        left: 5px;
+        top: 2px;
+        width: 6px;
+        height: 9px; } }
 
 /*product menu*/
 .product-menu-item {
