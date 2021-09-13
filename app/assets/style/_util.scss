@@ -58,7 +58,7 @@
     color: $gray-900;
 }
 
-/*文字對齊*/
+/*對齊*/
 .text-center{
     text-align: center;
 }
@@ -67,6 +67,9 @@
 }
 .text-left{
     text-align: left;
+}
+.align-middle{
+    vertical-align: middle;
 }
 
 

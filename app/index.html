@@ -100,7 +100,7 @@ current: index
         <img class="recommend-pic" src="./assets/images/rec-1.png" alt="顧客照片">
         <div class="recommend-text d-flex flex-column justify-content-between">
           <div class="text-gray900">
-            <span class="d-block fw-medium mb-2">Jessy</span>
+            <h4 class="d-block fw-medium mb-2">Jessy</h4>
             <p>眼鏡品質優良，下次還會想來這邊購買！</p>
           </div>
           <time class="text-gray600">2021/06/20</time>
@@ -110,7 +110,7 @@ current: index
         <img class="recommend-pic" src="./assets/images/rec-2.png" alt="顧客照片">
         <div class="recommend-text d-flex flex-column justify-content-between">
           <div class="text-gray900">
-            <span class="d-block fw-medium mb-2">凱倫</span>
+            <h4 class="d-block fw-medium mb-2">凱倫</h4>
             <p>做工細緻、鏡架很輕盈，待久也不會覺得有負擔，推薦給大家！</p>
           </div>
           <time class="text-gray600">2021/04/18</time>
@@ -120,7 +120,7 @@ current: index
         <img class="recommend-pic" src="./assets/images/rec-3.png" alt="顧客照片">
         <div class="recommend-text d-flex flex-column justify-content-between">
           <div class="text-gray900">
-            <span class="d-block fw-medium mb-2">悠悠</span>
+            <h4 class="d-block fw-medium mb-2">悠悠</h4>
             <p>謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！</p>
           </div>
           <time class="text-gray600">2020/12/25</time>
@@ -130,7 +130,7 @@ current: index
         <img class="recommend-pic" src="./assets/images/rec-4.png" alt="顧客照片">
         <div class="recommend-text d-flex flex-column justify-content-between">
           <div class="text-gray900">
-            <span class="d-block fw-medium mb-2">Kyuan</span>
+            <h4 class="d-block fw-medium mb-2">Kyuan</h4>
             <p>服務很好，品質沒有任何問題，非常喜歡。</p>
           </div>
           <time class="text-gray600">2020/10/31</time>
@@ -162,10 +162,17 @@ current: index
         <label for="opinion" class="mb-1">意見反應</label>
         <textarea id="opinion" name="opinion" rows="5" placeholder="請輸入您的意見"></textarea>
       </div>
+      <!-- 客製checkbox樣式版本 -->
+      <div class="contant-item mb-10 mb-md-6">
+        <input type="checkbox" id="privacy" name="privacy" class="styled-checkbox">
+        <label for="privacy">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
+      </div>
+      <!-- 前一版寫法
       <div class="contant-item d-flex mb-10 mb-md-6">
         <input type="checkbox" id="privacy" name="privacy" class="mr-1">
         <label for="privacy">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
       </div>
+       -->
       <input class="contant-submit d-block fw-bold" name="submit" type="submit" value="確認送出">
     </form>
   </div>

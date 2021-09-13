@@ -169,6 +169,7 @@
 .recommend{
     padding: 60px 0 80px;
     &-item{
+        height: 460px;
         border-radius: 4px;
         overflow: hidden;
         box-shadow: 0px 2px 6px #00000029;
@@ -182,8 +183,8 @@
     &-text{
         border: 1px solid $gray-300;
         padding: 16px;
-        height: 204px;
-        span{
+        height: calc(100% - 256px);
+        h4{
             font-size: $fz-sm;
         }
         time{
@@ -260,5 +261,66 @@
         @include mobile(){
             padding: 8px 0;
         }
+    }
+}
+
+/*客製checkbox樣式*/
+.styled-checkbox {
+    position: absolute;
+    opacity: 0;
+  
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+    }
+  
+    // Box
+    & + label:before {
+      content: "";
+      margin-right: 4px;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 20px;
+      height: 20px;
+      border: 2px solid black;
+      border-radius: 3px;
+      @include pad(){
+        width: 16px;
+        height: 16px;
+      }
+    }
+  
+    // Box hover
+    &:hover + label:before {
+      border: 2px solid $primary;
+      background: $primary;
+    }
+  
+    // Box checked
+    &:checked + label:before {
+      border: 2px solid $primary;
+      background: $primary;
+    }
+  
+    // Checkmark
+    &:checked + label:after {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 4px;
+      width: 6px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      @include pad(){
+        left: 5px;
+        top: 2px;
+        width: 6px;
+        height: 9px;
+      }
     }
 }
